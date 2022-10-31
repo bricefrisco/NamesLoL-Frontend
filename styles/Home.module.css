@@ -1,0 +1,9 @@
+.section {
+  margin-top: 50px;
+}
+
+@media (max-width: 750px) {
+  .section {
+    margin-top: 25px;
+  }
+}

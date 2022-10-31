@@ -1,0 +1,39 @@
+.faqContainer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  margin-left: 25px;
+}
+
+.faqQuestionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.faqQuestionContainer:hover {
+  cursor: pointer;
+}
+
+.faqQuestion {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #555273;
+  font-weight: 500;
+}
+
+.faqAnswer {
+  display: none;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 25px;
+  line-height: 1.5;
+  color: #454444;
+}
+
+.shown {
+  display: block;
+}

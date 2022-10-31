@@ -1,0 +1,30 @@
+.footerContainer {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.footer p:first-of-type {
+  margin-top: 0px;
+}
+
+.footer p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  max-width: 800px;
+  line-height: 1.5;
+  color: #555273;
+}
+
+@media (max-width: 1230px) {
+  .footer {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

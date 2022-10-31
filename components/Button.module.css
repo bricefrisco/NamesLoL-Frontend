@@ -1,0 +1,39 @@
+.button {
+  border: 1px solid #555273;
+  color: #555273;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.disabledButton {
+  border: 1px solid gray;
+  color: gray;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.disabledButton:hover {
+  cursor: not-allowed;
+}
+
+.button {
+  color: #555273;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.button:hover {
+  cursor: pointer;
+  outline: 1px solid #555273;
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+}

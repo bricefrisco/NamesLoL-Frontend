@@ -1,0 +1,12 @@
+.frequentlyAskedQuestions {
+  margin-top: 50px;
+  max-width: 725px;
+}
+
+.frequentlyAskedQuestions > div:first-of-type {
+  margin-top: 0px;
+}
+
+.frequentlyAskedQuestions > div {
+  margin-top: 25px;
+}

@@ -1,0 +1,130 @@
+.filters {
+  margin-top: 50px;
+  display: flex;
+}
+
+.regionContainer {
+  display: inline-block;
+  max-width: 235px;
+}
+
+.nameLengthContainer {
+  margin-left: 25px;
+  display: inline-block;
+  max-width: 135px;
+}
+
+.datePickerContainer {
+  margin-left: 25px;
+  display: inline-block;
+  max-width: 150px;
+}
+
+.paginationContainer {
+  margin-left: auto;
+  align-self: flex-end;
+  display: flex;
+}
+
+.iconButton {
+  padding: 3px 7px;
+  border-radius: 25px;
+}
+
+.iconButton:first-of-type {
+  margin-right: 25px;
+}
+
+.iconButton img {
+  margin-top: 2.5px;
+}
+
+.iconButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.tableContainer,
+.loading {
+  margin-top: 25px;
+  min-height: 500px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table tr th {
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  line-height: 24px;
+  font-weight: 500;
+  color: #555273;
+  letter-spacing: 0.03rem;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  height: 50px;
+}
+
+.table tr td:first-of-type {
+  padding-left: 5px;
+}
+
+.table tr td:last-of-type {
+  padding-right: 5px;
+}
+
+.bottomPagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.disclaimer {
+  margin-top: 50px;
+  font-size: 0.875rem;
+  max-width: 500px;
+  color: #555273;
+}
+
+@media (max-width: 750px) {
+  .filters,
+  .disclaimer {
+    margin-top: 25px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .datePickerContainer,
+  .nameLengthContainer {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  .mobileNone {
+    display: none;
+  }
+
+  .table td {
+    height: 60px;
+  }
+
+  .table tr td:first-of-type {
+    padding-left: 0px;
+  }
+
+  .table tr td:last-of-type {
+    padding-right: 0px;
+  }
+}
