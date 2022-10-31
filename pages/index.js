@@ -65,7 +65,7 @@ const Home = () => {
           tips on how to capture names after they expire.
         </Subtitle>
         <div style={{ marginTop: "15px", maxWidth: 300 }}>
-          <Button link="/lol-name-list">FAQ &rarr;</Button>
+          <Button link="/frequently-asked-questions">FAQ &rarr;</Button>
         </div>
       </section>
     </PageWrapper>
