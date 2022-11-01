@@ -13,7 +13,7 @@ const FrequentlyAskedQuestions = () => {
         <title>NamesLoL - Frequently Asked Questions</title>
         <meta
           name="description"
-          content="Learn how NamesLoL works, and tips to claming expired summoner names."
+          content="Learn how we calculate name expiration dates with our LoL Name Checker. Discover tips to claiming expired summoner names."
         />
       </Head>
 

@@ -145,10 +145,10 @@ const LoLNameList = ({
   return (
     <PageWrapper>
       <Head>
-        <title>NamesLoL - LoL Expiring Name List</title>
+        <title>NamesLoL - LoL Upcoming and Expiring Summoner Name Lists</title>
         <meta
           name="description"
-          content="Discover names which have expired or are expiring soon."
+          content="Discover cool and unique League of Legends summoner names which have previously expired or are expiring soon."
         />
       </Head>
 

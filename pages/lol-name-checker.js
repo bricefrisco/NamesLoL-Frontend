@@ -100,10 +100,10 @@ const LoLNameChecker = ({
   return (
     <PageWrapper>
       <Head>
-        <title>NamesLoL - LoL Name Checker</title>
+        <title>NamesLoL - LoL Name Availability and Expiration Checker</title>
         <meta
           name="description"
-          content="League of Legends name checker. Find out if a summoner name is available, or when it is going to expire."
+          content="League of Legends name checker. Find out if a summoner name is available, or exactly when it is going to expire."
         />
       </Head>
 

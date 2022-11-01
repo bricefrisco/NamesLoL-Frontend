@@ -11,10 +11,10 @@ const Home = () => {
   return (
     <PageWrapper>
       <Head>
-        <title>NamesLoL - Home</title>
+        <title>NamesLoL - LoL Name Checker and Expiring Name Lists</title>
         <meta
           name="description"
-          content="League of Legends Name Checker and Expiring Name List"
+          content="League of Legends name availability checker. Discover cool and unique summoner names using our expiring name lists."
         />
       </Head>
 
