@@ -48,8 +48,8 @@ const FrequentlyAskedQuestions = () => {
         </FAQ>
 
         <FAQ question="What time zones are the dates displayed in?">
-          All time zones you see have been automatically converted to your local
-          time zone (the time zone which is set on your PC or your phone).
+          All times you see have been automatically converted to your local time
+          zone (the time set on your PC or phone).
         </FAQ>
 
         <FAQ question="How often do you refresh/recheck summoner names?">
