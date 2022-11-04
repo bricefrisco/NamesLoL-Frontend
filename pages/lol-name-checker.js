@@ -14,6 +14,7 @@ import Input from "../components/Input";
 import Select from "../components/Select";
 import Button from "../components/Button";
 import SmallTitle from "../components/SmallTitle";
+import HorizontalAd from "../components/HorizontalAd";
 
 export const getServerSideProps = async (context) => {
   const { region, name } = context.query;
@@ -144,6 +145,8 @@ const LoLNameChecker = ({
         </div>
       </section>
 
+      <HorizontalAd />
+
       {loading && (
         <section className={styles.loading}>
           <ReactLoading type="bubbles" color="#555273" />
@@ -221,6 +224,8 @@ const LoLNameChecker = ({
               </p>
             )}
           </section>
+
+          {found || notFound ? <HorizontalAd /> : null}
         </>
       )}
       <Toaster />

@@ -39,11 +39,13 @@ const Document = () => {
         `}
         </Script>
         <Script
-          id="adsense"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544101606273007"
           crossorigin="anonymous"
         ></Script>
+        <Script id="adsense">
+          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+        </Script>
         <Main />
         <NextScript />
       </body>

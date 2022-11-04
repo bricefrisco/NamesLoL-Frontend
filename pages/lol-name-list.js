@@ -15,6 +15,7 @@ import Title from "../components/Title";
 import Button from "../components/Button";
 import styles from "../styles/LoLNameList.module.css";
 import { useEffect, useState } from "react";
+import HorizontalAd from "../components/HorizontalAd";
 
 const floorDate = (date) => {
   date.setHours(0);
@@ -156,6 +157,8 @@ const LoLNameList = ({
       <Subtitle>
         Discover names which have expired or are expiring soon
       </Subtitle>
+
+      <HorizontalAd />
 
       <section className={styles.filters}>
         <div className={styles.regionContainer}>
@@ -299,6 +302,8 @@ const LoLNameList = ({
                   .
                 </p>
               </section>
+
+              <HorizontalAd />
             </>
           ) : null}
         </>

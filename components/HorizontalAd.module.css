@@ -1,0 +1,9 @@
+.adContainer > ins {
+  margin-top: 50px;
+}
+
+@media (max-width: 750px) {
+  .adContainer > ins {
+    margin-top: 25px;
+  }
+}
