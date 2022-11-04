@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 const Document = () => {
   return (
@@ -24,6 +25,25 @@ const Document = () => {
         />
       </Head>
       <body>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-YH0QPLW8DZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YH0QPLW8DZ');
+        `}
+        </Script>
+        <Script
+          id="adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544101606273007"
+          crossorigin="anonymous"
+        ></Script>
         <Main />
         <NextScript />
       </body>
