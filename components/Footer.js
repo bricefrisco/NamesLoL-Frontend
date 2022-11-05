@@ -8,11 +8,13 @@ const Footer = () => {
     <div className={styles.footerContainer}>
       <footer className={styles.footer}>
         <p>
-          {date.getFullYear()} &copy;{" "}
-          <Link href="/" className="link">
-            NamesLoL
+          {date.getFullYear()} &copy; NamesLoL.{" "}
+          <Link href="/privacy-policy" className="link">
+            Privacy Policy
           </Link>
-          . Open source. Like this project?{" "}
+        </p>
+        <p>
+          Open source. Like this project?{" "}
           <a
             href="https://github.com/bricefrisco/NamesLoL"
             target="_blank"
@@ -21,10 +23,7 @@ const Footer = () => {
           >
             View the code
           </a>{" "}
-          and give it a star!
-        </p>
-        <p>
-          To report a bug or request a feature,{" "}
+          and give it a star! To report a bug or request a feature,{" "}
           <a
             href="https://github.com/bricefrisco/NamesLoL/issues"
             target="_blank"
