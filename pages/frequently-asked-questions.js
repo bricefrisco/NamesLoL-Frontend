@@ -11,7 +11,7 @@ const FrequentlyAskedQuestions = () => {
   return (
     <PageWrapper>
       <Head>
-        <title>NamesLoL - Frequently Asked Questions</title>
+        <title>Frequently asked questions - NamesLoL</title>
         <meta
           name="description"
           content="Learn how we calculate name expiration dates with our LoL Name Checker. Discover tips to claiming expired summoner names."
