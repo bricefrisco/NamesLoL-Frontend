@@ -1,4 +1,3 @@
-import Script from "next/script";
 import Footer from "./Footer";
 import Header from "./Header";
 import styles from "./PageWrapper.module.css";
