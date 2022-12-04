@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
   return (
     <PageWrapper>
       <Head>
-        <title>NamesLoL - Privacy Policy</title>
+        <title>Privacy Policy - NamesLoL</title>
         <meta name="description" content="NamesLoL Privacy Policy" />
       </Head>
 
