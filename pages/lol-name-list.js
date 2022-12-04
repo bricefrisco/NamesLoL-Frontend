@@ -16,6 +16,7 @@ import Button from "../components/Button";
 import styles from "../styles/LoLNameList.module.css";
 import { useEffect, useState } from "react";
 import HorizontalAd from "../components/HorizontalAd";
+import SummonerIcon from "../components/SummonerIcon";
 
 const floorDate = (date) => {
   date.setHours(0);
@@ -255,13 +256,19 @@ const LoLNameList = ({
 
                   return (
                     <tr key={summoner.name}>
-                      <td>
+                      <td className={styles.nameCell}>
                         <Link
                           href={`/lol-name-checker?region=${region.toLowerCase()}&name=${
                             summoner.name
                           }`}
                           className="link"
                         >
+                          <SummonerIcon
+                            summonerIconId={summoner.summonerIcon}
+                            width={40}
+                            height={40}
+                            draggable={false}
+                          />
                           {summoner.name}
                         </Link>
                       </td>

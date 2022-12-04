@@ -5,6 +5,15 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ddragon.leagueoflegends.com",
+        pathname: "/cdn/**/img/profileicon/**.png",
+      },
+    ],
+  },
   async redirects() {
     return [
       {

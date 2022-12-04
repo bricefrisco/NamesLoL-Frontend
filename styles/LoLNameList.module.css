@@ -72,7 +72,8 @@
 
 .table td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  height: 50px;
+  height: 60px;
+  overflow-wrap: anywhere;
 }
 
 .table tr td:first-of-type {
@@ -94,6 +95,15 @@
   font-size: 0.875rem;
   max-width: 500px;
   color: #555273;
+}
+
+.nameCell > a {
+  display: flex;
+  align-items: center;
+}
+
+.nameCell > a > img {
+  margin-right: 5px;
 }
 
 @media (max-width: 750px) {

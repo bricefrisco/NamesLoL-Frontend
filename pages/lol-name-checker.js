@@ -15,6 +15,7 @@ import Select from "../components/Select";
 import Button from "../components/Button";
 import SmallTitle from "../components/SmallTitle";
 import HorizontalAd from "../components/HorizontalAd";
+import SummonerIcon from "../components/SummonerIcon";
 
 export const getServerSideProps = async (context) => {
   const { region, name } = context.query;
@@ -167,16 +168,33 @@ const LoLNameChecker = ({
                   )}
                   .
                 </SmallTitle>
-                <p className={styles.info}>
-                  <span>Level:</span> {summoner.level}
-                </p>
-                <p className={styles.info}>
-                  <span>Last Activity:</span>{" "}
-                  <Moment
-                    date={new Date(summoner.revisionDate)}
-                    format="MM/DD/YYYY hh:mm:ss A"
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: 15,
+                    paddingBottom: 5,
+                  }}
+                >
+                  <SummonerIcon
+                    summonerIconId={summoner.summonerIcon}
+                    width={64}
+                    height={64}
+                    draggable={false}
                   />
-                </p>
+                  <div style={{ marginLeft: 10 }}>
+                    <p className={styles.info} style={{ marginTop: 0 }}>
+                      <span>Level:</span> {summoner.level}
+                    </p>
+                    <p className={styles.info} style={{ marginTop: 3 }}>
+                      <span>Last Activity:</span>{" "}
+                      <Moment
+                        date={new Date(summoner.revisionDate)}
+                        format="MM/DD/YYYY hh:mm:ss A"
+                      />
+                    </p>
+                  </div>
+                </div>
                 <p className={styles.info}>
                   <span>Name Decay:</span> min(30, max(6, {summoner.level})) ={" "}
                   {decay} months
