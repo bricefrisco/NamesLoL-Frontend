@@ -105,13 +105,14 @@ const LoLNameChecker = ({
         <title>Name availability checker - NamesLoL</title>
         <meta
           name="description"
-          content="League of Legends name checker. Find out if a summoner name is available, or exactly when it is going to expire."
+          content="League of Legends name checker. Find out if a summoner name is available, or exactly when it is going to expire"
         />
       </Head>
 
-      <Title>LoL Name Checker</Title>
+      <Title>Name Checker</Title>
       <Subtitle>
-        Find out if a summoner name is available or when it is going to expire
+        Find out if a summoner name is available or exactly when it is going to
+        expire.
       </Subtitle>
 
       <section className={styles.formContainer}>
@@ -140,8 +141,8 @@ const LoLNameChecker = ({
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <Button link={url} disabled={name?.length < 3}>
-            Check Availability &rarr;
+          <Button link={url} disabled={name?.length < 3} showNextIcon>
+            Check Availability
           </Button>
         </div>
       </section>
@@ -150,7 +151,7 @@ const LoLNameChecker = ({
 
       {loading && (
         <section className={styles.loading}>
-          <ReactLoading type="bubbles" color="#555273" />
+          <ReactLoading type="bubbles" color="#a09ccb" />
         </section>
       )}
 
@@ -184,10 +185,11 @@ const LoLNameChecker = ({
                   />
                   <div style={{ marginLeft: 10 }}>
                     <p className={styles.info} style={{ marginTop: 0 }}>
-                      <span>Level:</span> {summoner.level}
+                      <span className={styles.infoLabel}>Level:</span>{" "}
+                      {summoner.level}
                     </p>
                     <p className={styles.info} style={{ marginTop: 3 }}>
-                      <span>Last Activity:</span>{" "}
+                      <span className={styles.infoLabel}>Last Activity:</span>{" "}
                       <Moment
                         date={new Date(summoner.revisionDate)}
                         format="MM/DD/YYYY hh:mm:ss A"
@@ -196,11 +198,13 @@ const LoLNameChecker = ({
                   </div>
                 </div>
                 <p className={styles.info}>
-                  <span>Name Decay:</span> min(30, max(6, {summoner.level})) ={" "}
-                  {decay} months
+                  <span className={styles.infoLabel}>Name Decay:</span> min(30,
+                  max(6, {summoner.level})) = {decay} months
                 </p>
                 <p className={styles.info}>
-                  <span>{available ? "Expired:" : "Expires:"}</span>{" "}
+                  <span className={styles.infoLabel}>
+                    {available ? "Expired:" : "Expires:"}
+                  </span>{" "}
                   <Moment
                     date={new Date(summoner.availabilityDate)}
                     format="MM/DD/YYYY hh:mm:ss A"
@@ -246,7 +250,14 @@ const LoLNameChecker = ({
           {found || notFound ? <HorizontalAd /> : null}
         </>
       )}
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            backgroundColor: "#181b1e",
+            color: "rgba(234, 242, 247, 1)",
+          },
+        }}
+      />
     </PageWrapper>
   );
 };

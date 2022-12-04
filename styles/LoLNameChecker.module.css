@@ -40,7 +40,11 @@
 .info {
   margin-top: 10px;
   margin-bottom: 0;
-  color: #555273;
+  color: rgba(162, 169, 185);
+}
+
+.infoLabel {
+  font-weight: 600;
 }
 
 .info > span {
@@ -50,7 +54,7 @@
 .disclaimer {
   font-size: 0.875rem;
   max-width: 500px;
-  color: #555273;
+  color: rgba(162, 169, 185);
 }
 
 .buttonContainer {

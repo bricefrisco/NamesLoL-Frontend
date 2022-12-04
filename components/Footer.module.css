@@ -1,5 +1,5 @@
 .footerContainer {
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(43, 46, 57, 1);
 }
 
 .footer {
@@ -19,7 +19,6 @@
   margin-bottom: 0;
   max-width: 800px;
   line-height: 1.5;
-  color: #555273;
 }
 
 @media (max-width: 1230px) {

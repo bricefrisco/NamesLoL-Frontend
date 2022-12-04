@@ -12,10 +12,10 @@ const Home = () => {
   return (
     <PageWrapper>
       <Head>
-        <title>Name checker and expiring name lists - NamesLoL</title>
+        <title>Name checker and expiring names list - NamesLoL</title>
         <meta
           name="description"
-          content="League of Legends name availability checker. Discover cool and unique summoner names using our expiring name lists."
+          content="League of Legends name availability checker. Discover cool and unique summoner names using our expiring names list."
         />
       </Head>
 
@@ -32,18 +32,20 @@ const Home = () => {
           expire.
         </Subtitle>
         <div style={{ marginTop: "15px", maxWidth: 300 }}>
-          <Button link="/lol-name-checker">LoL Name Checker &rarr;</Button>
+          <Button link="/lol-name-checker" showNextIcon>
+            Name Checker
+          </Button>
         </div>
       </section>
 
       <HorizontalAd />
 
       <section className={styles.section}>
-        <SmallTitle>League of Legends Name Lists</SmallTitle>
+        <SmallTitle>League of Legends Expiring Names List</SmallTitle>
         <Subtitle>
           Use our{" "}
           <Link href="/lol-name-list" className="link">
-            LoL Expiring Name Lists
+            LoL Expiring Names List
           </Link>{" "}
           to discover summoner names which have expired or will expire soon.
           After summoner names expire, they are up for grabs for anyone with an
@@ -51,7 +53,9 @@ const Home = () => {
           League of Legends name ideas.
         </Subtitle>
         <div style={{ marginTop: "15px", maxWidth: 300 }}>
-          <Button link="/lol-name-list">LoL Name Lists &rarr;</Button>
+          <Button link="/lol-name-list" showNextIcon>
+            Expiring Names List
+          </Button>
         </div>
       </section>
 
@@ -70,7 +74,9 @@ const Home = () => {
           tips on how to capture names after they expire.
         </Subtitle>
         <div style={{ marginTop: "15px", maxWidth: 300 }}>
-          <Button link="/frequently-asked-questions">FAQ &rarr;</Button>
+          <Button link="/frequently-asked-questions" showNextIcon>
+            FAQ
+          </Button>
         </div>
       </section>
     </PageWrapper>

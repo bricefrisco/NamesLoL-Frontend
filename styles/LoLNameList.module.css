@@ -29,19 +29,18 @@
 .iconButton {
   padding: 3px 7px;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .iconButton:first-of-type {
   margin-right: 25px;
 }
 
-.iconButton img {
-  margin-top: 2.5px;
-}
-
 .iconButton:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+}
+.iconButton:hover > a > svg {
+  color: #a09ccb;
 }
 
 .tableContainer,
@@ -58,22 +57,23 @@
 
 .table tr th {
   text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
   line-height: 24px;
-  font-weight: 500;
-  color: #555273;
+  color: rgba(162, 169, 185);
+  font-weight: 600;
   letter-spacing: 0.03rem;
 }
 
 .table tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .table td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   height: 60px;
   overflow-wrap: anywhere;
+  color: rgba(162, 169, 185);
 }
 
 .table tr td:first-of-type {
@@ -94,7 +94,7 @@
   margin-top: 50px;
   font-size: 0.875rem;
   max-width: 500px;
-  color: #555273;
+  color: rgba(162, 169, 185);
 }
 
 .nameCell > a {

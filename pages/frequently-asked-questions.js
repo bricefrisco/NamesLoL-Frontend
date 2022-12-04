@@ -20,7 +20,8 @@ const FrequentlyAskedQuestions = () => {
 
       <Title>Frequently Asked Questions</Title>
       <Subtitle>
-        Learn how NamesLoL works, and tips to claming expired summoner names
+        Read through our FAQ to learn how NamesLoL works. Tips are included to
+        claiming the expired names you want!
       </Subtitle>
 
       <HorizontalAd />

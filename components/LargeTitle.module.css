@@ -1,6 +1,7 @@
 .largeTitle {
-  font-size: 6rem;
-  font-weight: normal;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(234, 242, 247, 1);
   letter-spacing: 0.05rem;
   margin-top: 0;
   margin-bottom: 0;

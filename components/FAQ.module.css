@@ -1,5 +1,5 @@
 .faqContainer {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .icon {
@@ -20,7 +20,7 @@
 .faqQuestion {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #555273;
+  color: rgba(234, 242, 247, 1);
   font-weight: 500;
 }
 
@@ -31,7 +31,7 @@
   margin: 0;
   padding-bottom: 25px;
   line-height: 1.5;
-  color: #454444;
+  color: rgba(162, 169, 185);
 }
 
 .shown {

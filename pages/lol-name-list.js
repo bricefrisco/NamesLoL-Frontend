@@ -17,6 +17,8 @@ import styles from "../styles/LoLNameList.module.css";
 import { useEffect, useState } from "react";
 import HorizontalAd from "../components/HorizontalAd";
 import SummonerIcon from "../components/SummonerIcon";
+import BackIcon from "../components/BackIcon";
+import NextIcon from "../components/NextIcon";
 
 const floorDate = (date) => {
   date.setHours(0);
@@ -147,16 +149,16 @@ const LoLNameList = ({
   return (
     <PageWrapper>
       <Head>
-        <title>Expiring name list - NamesLoL</title>
+        <title>Expiring names list - NamesLoL</title>
         <meta
           name="description"
           content="Discover cool and unique League of Legends summoner names which have previously expired or are expiring soon."
         />
       </Head>
 
-      <Title>LoL Expiring Name List</Title>
+      <Title>Expiring Names List</Title>
       <Subtitle>
-        Discover names which have expired or are expiring soon
+        Discover summoner names which have expired or are expiring soon
       </Subtitle>
 
       <HorizontalAd />
@@ -207,26 +209,12 @@ const LoLNameList = ({
         <div className={styles.paginationContainer}>
           <div className={styles.iconButton}>
             <Link href={previousPage}>
-              <Image
-                src="/previous.png"
-                alt="Previous Page"
-                width={32}
-                height={32}
-                draggable={false}
-                className={styles.mobileNavMenu}
-              />
+              <BackIcon />
             </Link>
           </div>
           <div className={styles.iconButton}>
             <Link href={nextPage}>
-              <Image
-                src="/next.png"
-                alt="Next Page"
-                width={32}
-                height={32}
-                draggable={false}
-                className={styles.mobileNavMenu}
-              />
+              <NextIcon />
             </Link>
           </div>
         </div>
@@ -234,7 +222,7 @@ const LoLNameList = ({
 
       {loading && (
         <section className={styles.loading}>
-          <ReactLoading type="bubbles" color="#555273" />
+          <ReactLoading type="bubbles" color="#a09ccb" />
         </section>
       )}
 
@@ -290,11 +278,15 @@ const LoLNameList = ({
           {summoners?.length ? (
             <>
               <div className={styles.bottomPagination}>
-                <div style={{ width: "120px", marginRight: "25px" }}>
-                  <Button link={previousPage}>&larr; Previous</Button>
+                <div style={{ width: "140px", marginRight: "25px" }}>
+                  <Button link={previousPage} showBackIcon>
+                    Previous
+                  </Button>
                 </div>
-                <div style={{ width: "120px" }}>
-                  <Button link={nextPage}>Next &rarr;</Button>
+                <div style={{ width: "140px" }}>
+                  <Button link={nextPage} showNextIcon>
+                    Next
+                  </Button>
                 </div>
               </div>
 
@@ -315,7 +307,14 @@ const LoLNameList = ({
           ) : null}
         </>
       )}
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            backgroundColor: "#181b1e",
+            color: "rgba(234, 242, 247, 1)",
+          },
+        }}
+      />
     </PageWrapper>
   );
 };

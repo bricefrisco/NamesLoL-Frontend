@@ -12,6 +12,7 @@
 
 .privacyPolicy ul li {
   margin-top: 0.7rem;
+  color: rgba(162, 169, 185);
 }
 
 .privacyPolicy ul li:first-of-type {

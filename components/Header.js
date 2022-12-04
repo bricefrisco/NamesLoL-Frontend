@@ -14,7 +14,7 @@ const routes = [
     link: "/lol-name-checker",
   },
   {
-    name: "Expiring Name List",
+    name: "Expiring Names List",
     link: "/lol-name-list",
   },
   {
@@ -32,10 +32,10 @@ const Header = () => {
     <div className={styles.headerContainer}>
       <header className={styles.header}>
         <Image
-          src="/logo.png"
+          src="/apple-touch-icon.png"
           alt="NamesLoL Logo"
           width={76}
-          height={92}
+          height={76}
           draggable={false}
         />
 
