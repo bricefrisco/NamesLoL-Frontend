@@ -44,7 +44,7 @@ export const getServerSideProps = async (context) => {
   const backwardsQuery = backwards === "true" ? "true" : "false";
 
   const url = new URL(
-    `https://api.nameslol.com/${regionQuery.toLowerCase()}/summoners`
+    `${process.env.BACKEND_API}/${regionQuery.toLowerCase()}/summoners`
   );
   url.searchParams.append("timestamp", String(timestampQuery));
   url.searchParams.append("backwards", String(backwardsQuery));
