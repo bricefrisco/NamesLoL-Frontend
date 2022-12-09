@@ -5,7 +5,6 @@ import toast, { Toaster } from "react-hot-toast";
 import Moment from "react-moment";
 import Link from "next/link";
 import ReactLoading from "react-loading";
-
 import styles from "../styles/LoLNameChecker.module.css";
 import PageWrapper from "../components/PageWrapper";
 import Title from "../components/Title";
@@ -22,7 +21,7 @@ export const getServerSideProps = async (context) => {
 
   if (region && name) {
     const res = await fetch(
-      `https://api.nameslol.com/${region}/summoner/${name}`
+      `${process.env.BACKEND_API}/${region}/summoner/${name}`
     );
 
     const summoner = await res.json();

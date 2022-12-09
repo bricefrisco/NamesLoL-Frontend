@@ -13,6 +13,7 @@ const SummonerIcon = ({ summonerIconId, ...rest }) => {
       src={src}
       alt="Summoner Icon"
       onError={() => setSrc("/unknown-summoner-icon.png")}
+      unoptimized
     />
   );
 };

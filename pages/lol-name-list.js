@@ -31,8 +31,6 @@ const floorDate = (date) => {
 export const getServerSideProps = async (context) => {
   const { region, date, backwards, nameLength } = context.query;
 
-  const regionQuery = region ? region : "NA";
-
   let timestampQuery;
   if (date) {
     timestampQuery = date;
@@ -44,7 +42,7 @@ export const getServerSideProps = async (context) => {
   const backwardsQuery = backwards === "true" ? "true" : "false";
 
   const url = new URL(
-    `https://api.nameslol.com/${regionQuery.toLowerCase()}/summoners`
+    `${process.env.BACKEND_API}/${region?.toLowerCase() || "na"}/summoners`
   );
   url.searchParams.append("timestamp", String(timestampQuery));
   url.searchParams.append("backwards", String(backwardsQuery));
@@ -57,7 +55,7 @@ export const getServerSideProps = async (context) => {
 
   return {
     props: {
-      region: regionQuery.toUpperCase(),
+      region: region?.toUpperCase() || "NA",
       nameLength: nameLength || "any",
       timestamp: timestampQuery,
       summoners: data?.summoners || null,
