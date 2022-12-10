@@ -19,6 +19,7 @@ import NextIcon from "../components/NextIcon";
 import SideRailAd from "../components/SideRailAd";
 import HorizontalAdDesktop from "../components/HorizontalAdDesktop";
 import HorizontalAdMobile from "../components/HorizontalAdMobile";
+import PleaseDisableAdBlocker from "../components/PleaseDisableAdBlocker";
 
 const floorDate = (date) => {
   date.setHours(0);
@@ -305,6 +306,7 @@ const LoLNameList = ({
         </>
       )}
 
+      <PleaseDisableAdBlocker />
       <SideRailAd id="name-list-right" />
       <Toaster
         toastOptions={{
