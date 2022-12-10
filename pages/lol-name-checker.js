@@ -116,11 +116,8 @@ const LoLNameChecker = ({
         expire.
       </Subtitle>
 
-      <HorizontalAdDesktop id="name-checker-d" style={{ marginTop: 25 }} />
-      <HorizontalAdMobile
-        id="name-checker-m"
-        style={{ marginTop: 20, paddingBottom: 5 }}
-      />
+      <HorizontalAdDesktop id="name-checker-d" />
+      <HorizontalAdMobile id="name-checker-m" />
 
       <section className={styles.formContainer}>
         <div className={styles.inputContainer}>
