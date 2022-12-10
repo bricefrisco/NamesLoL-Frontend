@@ -2,6 +2,10 @@
   max-width: 728px;
 }
 
+.horizontalAdDesktop:empty {
+  margin-top: 0px !important;
+}
+
 @media (max-width: 777px) {
   .horizontalAdDesktop {
     display: none;
