@@ -24,7 +24,7 @@ const Document = () => {
           href="/favicon-16x16.png"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
@@ -44,14 +44,21 @@ const Document = () => {
           gtag('config', 'G-YH0QPLW8DZ');
         `}
         </Script>
+
         <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544101606273007"
-          crossorigin="anonymous"
-        ></Script>
-        <Script id="adsense">
-          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+          id="nitropay-ads"
+          data-cfasync="false"
+          strategy="afterInteractive"
+        >
+          {`window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{window.nitroAds.queue.push(["createAd",arguments,e])})},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};`}
         </Script>
+
+        <Script
+          data-cfasync="false"
+          async
+          src="https://s.nitropay.com/ads-1323.js"
+          strategy="afterInteractive"
+        ></Script>
         <Main />
         <NextScript />
       </body>

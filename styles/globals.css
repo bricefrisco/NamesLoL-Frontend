@@ -30,6 +30,35 @@ p {
 }
 
 /**
+* CCPA (?usp_debug=1)
+*/
+.ccpa > a {
+  color: rgb(116, 158, 248);
+  text-decoration: none;
+}
+.ccpa > a:hover {
+  text-decoration: underline;
+}
+.ccpa > a > span {
+  display: block;
+  padding-top: 10px;
+}
+
+/**
+* GDPR (?gdpr_debug=1)
+*/
+#ncmp-consent-link > button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin-top: 10px;
+  color: rgb(116, 158, 248);
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/**
 * DatePicker overrides
 */
 .react-datepicker {
