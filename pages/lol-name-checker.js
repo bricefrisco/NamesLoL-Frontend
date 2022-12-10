@@ -17,6 +17,7 @@ import SummonerIcon from "../components/SummonerIcon";
 import HorizontalAdMobile from "../components/HorizontalAdMobile";
 import HorizontalAdDesktop from "../components/HorizontalAdDesktop";
 import SideRailAd from "../components/SideRailAd";
+import PleaseDisableAdBlocker from "../components/PleaseDisableAdBlocker";
 
 export const getServerSideProps = async (context) => {
   const { region, name } = context.query;
@@ -251,6 +252,7 @@ const LoLNameChecker = ({
         </>
       )}
       <SideRailAd id="name-checker-right" mediaMinWidth="1500px" />
+      <PleaseDisableAdBlocker />
       <Toaster
         toastOptions={{
           style: {
