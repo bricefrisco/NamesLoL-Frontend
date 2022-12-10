@@ -2,8 +2,8 @@
   max-width: 320px;
 }
 
-.horizontalAdMobile:empty {
-  margin-top: 0px !important;
+.horizontalAdMobile:has(iframe) {
+  margin-top: 15px;
 }
 
 @media (min-width: 778px) {

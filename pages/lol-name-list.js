@@ -159,8 +159,8 @@ const LoLNameList = ({
         Discover summoner names which have expired or are expiring soon
       </Subtitle>
 
-      <HorizontalAdMobile id="name-list-m" style={{ marginTop: 15 }} />
-      <HorizontalAdDesktop id="name-list-d" style={{ marginTop: 25 }} />
+      <HorizontalAdMobile id="name-list-m" />
+      <HorizontalAdDesktop id="name-list-d" />
 
       <section className={styles.filters}>
         <div className={styles.regionContainer}>
