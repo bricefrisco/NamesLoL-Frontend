@@ -2,6 +2,10 @@
   max-width: 320px;
 }
 
+.horizontalAdMobile:empty {
+  margin-top: 0px !important;
+}
+
 @media (min-width: 778px) {
   .horizontalAdMobile {
     display: none;
