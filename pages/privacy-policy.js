@@ -55,6 +55,23 @@ const PrivacyPolicy = () => {
             </a>
             .
           </li>
+          <li>
+            The{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://oag.ca.gov/privacy/ccpa"
+              className="link"
+            >
+              California Consumer Privacy Act (CCPA)
+            </a>{" "}
+            provides you with rights regarding how your data or personal
+            information is treated. Under the legislation, California residents
+            can choose to opt out of the “sale” of their personal information to
+            third parties. Based on the CCPA definition, “sale” refers to data
+            collection for the purpose of creating advertising and other
+            communications.
+          </li>
         </ul>
       </section>
     </PageWrapper>

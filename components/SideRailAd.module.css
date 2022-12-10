@@ -1,0 +1,9 @@
+.sideRailAd {
+  width: 160px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  margin-top: -300px;
+  width: auto;
+  right: 10px;
+}

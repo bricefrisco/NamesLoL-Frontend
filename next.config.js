@@ -21,6 +21,11 @@ module.exports = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/ads.txt",
+        destination: "https://api.nitropay.com/v1/ads-1323.txt",
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,0 +1,9 @@
+.horizontalAdDesktop {
+  max-width: 728px;
+}
+
+@media (max-width: 777px) {
+  .horizontalAdDesktop {
+    display: none;
+  }
+}

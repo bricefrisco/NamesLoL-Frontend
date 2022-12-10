@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.css";
 import SmallTitle from "../components/SmallTitle";
 import Subtitle from "../components/Subtitle";
 import Button from "../components/Button";
-import HorizontalAd from "../components/HorizontalAd";
 
 const Home = () => {
   return (
@@ -38,8 +37,6 @@ const Home = () => {
         </div>
       </section>
 
-      <HorizontalAd />
-
       <section className={styles.section}>
         <SmallTitle>League of Legends Expiring Names List</SmallTitle>
         <Subtitle>
@@ -58,8 +55,6 @@ const Home = () => {
           </Button>
         </div>
       </section>
-
-      <HorizontalAd />
 
       <section className={styles.section}>
         <SmallTitle>Frequently Asked Questions</SmallTitle>

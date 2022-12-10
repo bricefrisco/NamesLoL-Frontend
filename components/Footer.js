@@ -41,6 +41,12 @@ const Footer = () => {
           associated properties are trademarks or registered trademarks of Riot
           Games, Inc.
         </p>
+
+        {/* ?usp_debug=1 */}
+        <div id="ncmp-consent-link"></div>
+
+        {/* ?gdpr_debug=1 */}
+        <span data-ccpa-link="1" className="ccpa"></span>
       </footer>
     </div>
   );

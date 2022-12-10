@@ -13,8 +13,10 @@ import Input from "../components/Input";
 import Select from "../components/Select";
 import Button from "../components/Button";
 import SmallTitle from "../components/SmallTitle";
-import HorizontalAd from "../components/HorizontalAd";
 import SummonerIcon from "../components/SummonerIcon";
+import HorizontalAdMobile from "../components/HorizontalAdMobile";
+import HorizontalAdDesktop from "../components/HorizontalAdDesktop";
+import SideRailAd from "../components/SideRailAd";
 
 export const getServerSideProps = async (context) => {
   const { region, name } = context.query;
@@ -114,6 +116,12 @@ const LoLNameChecker = ({
         expire.
       </Subtitle>
 
+      <HorizontalAdDesktop id="name-checker-d" style={{ marginTop: 25 }} />
+      <HorizontalAdMobile
+        id="name-checker-m"
+        style={{ marginTop: 20, paddingBottom: 5 }}
+      />
+
       <section className={styles.formContainer}>
         <div className={styles.inputContainer}>
           <div className={styles.input}>
@@ -145,8 +153,6 @@ const LoLNameChecker = ({
           </Button>
         </div>
       </section>
-
-      <HorizontalAd />
 
       {loading && (
         <section className={styles.loading}>
@@ -245,10 +251,9 @@ const LoLNameChecker = ({
               </p>
             )}
           </section>
-
-          {found || notFound ? <HorizontalAd /> : null}
         </>
       )}
+      <SideRailAd id="name-checker-right" mediaMinWidth="1500px" />
       <Toaster
         toastOptions={{
           style: {

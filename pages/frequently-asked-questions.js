@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import FAQ from "../components/FAQ";
-import HorizontalAd from "../components/HorizontalAd";
 import PageWrapper from "../components/PageWrapper";
 import Subtitle from "../components/Subtitle";
 import Title from "../components/Title";
@@ -23,8 +22,6 @@ const FrequentlyAskedQuestions = () => {
         Read through our FAQ to learn how NamesLoL works. Tips are included to
         claiming the expired names you want!
       </Subtitle>
-
-      <HorizontalAd />
 
       <section className={styles.frequentlyAskedQuestions}>
         <FAQ question="How do you estimate when summoner names expire?">
@@ -126,8 +123,6 @@ const FrequentlyAskedQuestions = () => {
           even hours.
         </FAQ>
       </section>
-
-      <HorizontalAd />
     </PageWrapper>
   );
 };

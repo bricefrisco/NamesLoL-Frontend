@@ -1,12 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import Moment from "react-moment";
 import moment from "moment";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import ReactLoading from "react-loading";
-
 import DatePicker from "../components/DatePicker";
 import PageWrapper from "../components/PageWrapper";
 import Select from "../components/Select";
@@ -15,10 +13,12 @@ import Title from "../components/Title";
 import Button from "../components/Button";
 import styles from "../styles/LoLNameList.module.css";
 import { useEffect, useState } from "react";
-import HorizontalAd from "../components/HorizontalAd";
 import SummonerIcon from "../components/SummonerIcon";
 import BackIcon from "../components/BackIcon";
 import NextIcon from "../components/NextIcon";
+import SideRailAd from "../components/SideRailAd";
+import HorizontalAdDesktop from "../components/HorizontalAdDesktop";
+import HorizontalAdMobile from "../components/HorizontalAdMobile";
 
 const floorDate = (date) => {
   date.setHours(0);
@@ -159,7 +159,8 @@ const LoLNameList = ({
         Discover summoner names which have expired or are expiring soon
       </Subtitle>
 
-      <HorizontalAd />
+      <HorizontalAdMobile id="name-list-m" style={{ marginTop: 15 }} />
+      <HorizontalAdDesktop id="name-list-d" style={{ marginTop: 25 }} />
 
       <section className={styles.filters}>
         <div className={styles.regionContainer}>
@@ -299,12 +300,12 @@ const LoLNameList = ({
                   .
                 </p>
               </section>
-
-              <HorizontalAd />
             </>
           ) : null}
         </>
       )}
+
+      <SideRailAd id="name-list-right" />
       <Toaster
         toastOptions={{
           style: {
