@@ -1,8 +1,10 @@
 .horizontalAdMobile {
+  min-height: 0 !important;
   max-width: 320px;
 }
 
 .horizontalAdMobile:has(iframe) {
+  min-height: 50px !important;
   margin-top: 15px;
 }
 

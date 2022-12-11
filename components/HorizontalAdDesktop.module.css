@@ -1,8 +1,10 @@
 .horizontalAdDesktop {
+  min-height: 0 !important;
   max-width: 728px;
 }
 
 .horizontalAdDesktop:has(iframe) {
+  min-height: 90px !important;
   margin-top: 25px;
 }
 
