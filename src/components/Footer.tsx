@@ -4,7 +4,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="container mx-auto block max-w-screen-xl place-content-between items-start border-t border-gray-700 px-3.5 py-6 text-sm md:py-8">
+    <footer className="container mx-auto block max-w-screen-xl place-content-between items-start border-t border-gray-700 px-2.5 py-6 text-sm md:py-8">
       <div className="place-content-between lg:flex">
         <div>
           <h2 className="text-lg font-semibold">NamesLoL</h2>
