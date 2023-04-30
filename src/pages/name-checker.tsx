@@ -146,12 +146,18 @@ const NameChecker = ({
           <>
             <h2 className="text-xl font-semibold">
               Summoner name <span className="italic">{initialName}</span> is{" "}
-              {nameAvailable ? (
-                <span className="text-green-500">available</span>
+              {!initialRenderComplete ? (
+                <span className="invisible">loading...</span>
               ) : (
-                <span className="text-red-500">unavailable</span>
+                <>
+                  {nameAvailable ? (
+                    <span className="text-green-500">available</span>
+                  ) : (
+                    <span className="text-red-500">unavailable</span>
+                  )}
+                  .
+                </>
               )}
-              .
             </h2>
 
             <div className="mt-3 mb-1 flex items-center">
