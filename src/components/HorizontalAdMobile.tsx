@@ -6,8 +6,10 @@ type Props = {
   className?: string;
 };
 
+declare const window: any;
+
 const HorizontalAdMobile = ({ id, className }: Props) => {
-  const [ad, setAd] = useState();
+  const [ad, setAd] = useState<any>();
   const router = useRouter();
 
   useEffect(() => {
