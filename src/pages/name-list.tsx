@@ -196,18 +196,16 @@ const NameList = ({
       <Table className="mt-2">
         <TableHead>
           <TableColumn>Name</TableColumn>
-          <TableColumn className="text-right md:text-left">Level</TableColumn>
-          <TableColumn className="hidden md:table-cell">Expires</TableColumn>
-          <TableColumn className="text-right md:text-left">
-            Expiry Date
-          </TableColumn>
+          <TableColumn className="hidden sm:table-cell">Level</TableColumn>
+          <TableColumn>Expires</TableColumn>
+          <TableColumn>Expiry Date</TableColumn>
         </TableHead>
         <TableBody>
           {summoners?.map((summoner: any) => (
             <TableRow key={summoner.name}>
               <TableData>
                 <Link
-                  className="flex items-center text-blue-400 hover:underline"
+                  className="flex items-center break-all text-blue-400 hover:underline"
                   href={{
                     pathname: "/name-checker",
                     query: {
@@ -220,18 +218,18 @@ const NameList = ({
                     summonerIconId={summoner.summonerIcon}
                     width={42}
                     height={42}
-                    className="mr-2 rounded-lg"
+                    className="mr-2 break-words rounded-lg"
                   />
                   {summoner.name}
                 </Link>
               </TableData>
-              <TableData className="text-right md:text-left">
+              <TableData className="hidden sm:table-cell">
                 {summoner.level}
               </TableData>
-              <TableData className="hidden md:table-cell">
+              <TableData>
                 <Moment fromNow>{summoner.availabilityDate}</Moment>
               </TableData>
-              <TableData className="text-right md:text-left">
+              <TableData>
                 <Moment format="MM/DD/YYYY hh:mm:ss A">
                   {summoner.availabilityDate}
                 </Moment>
