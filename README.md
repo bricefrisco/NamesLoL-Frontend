@@ -1,4 +1,4 @@
-# NamesLoL (Frontend)
+# NamesLoL - Frontend
 
 👁️ Find upcoming and recently expired League of Legends summoner names.  
 🔎 Search for summoner names to find out if they are available, or when they will become available.  
@@ -6,32 +6,19 @@
 
 ## Official Website
 
-https://nameslol.com/
-
-## Architecture
-
-![architecture](https://i.imgur.com/MnuaMxk.png)
+https://www.nameslol.com/
 
 ## Tech Stack
 
-- Frontend written in Javascript using the ReactJS library.
-- Backend written in Typescript using NodeJS.
-- Orchestrated using Serverless Framework
-- Data is stored in AWS DynamoDB.
-- Frontend is hosted in AWS S3 behind CloudFront.
-- Backend is run by Lambda functions behind API Gateway
+- Written with React and Typescript
+- Uses NextJS for server-side rendering
+- Deployed via Vercel
 
-## Bugs and Feature Requests
+## More Info
 
-All bugs and feature requests should be submitted by opening a Github [issue](https://github.com/bricefrisco/NamesLoL/issues).  
-These can be opened to request a new feature, or to report a current feature that is unavailable.
-
-## Installation
-
-Pull down the code, run `npm install` then `npm start`.  
-By default, the `.env` file specifies the NamesLoL API. This is okay to do, as the CORS policy is open.  
-If you are also running the [backend](https://github.com/bricefrisco/NamesLoL), then modify the `.env` file to point to your API gateway.  
-That's it! You can now develop and test locally.
+This repository hosts the UI for NamesLoL.  
+Visit the [backend repository](https://github.com/bricefrisco/NamesLoL) for more information on how NamesLoL works.  
+If you find a bug or want to request a new feature, please do so on the repository listed above.
 
 ## Disclaimers
 

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+Globals
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cst-break {
+  margin: 0 calc(50% - 49vw);
+}
+
+/**
+ Ad Placements
+*/
+.np-horizontal-desktop {
+  min-height: 0 !important;
+  max-width: 728px;
+}
+
+.np-horizontal-desktop:has(iframe) {
+  min-height: 90px !important;
+  margin-top: 25px;
+}
+
+.np-horizontal-mobile {
+  min-height: 0 !important;
+  max-width: 320px;
+}
+
+.np-horizontal-mobile:has(iframe) {
+  min-height: 50px !important;
+  margin-top: 15px;
+}
+
+.np-siderail {
+  width: 160px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  margin-top: -300px;
+  width: auto;
+  right: 10px;
+}
+
+@media (max-width: 777px) {
+  .np-horizontal-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 778px) {
+  .np-horizontal-mobile {
+    display: none;
+  }
+}

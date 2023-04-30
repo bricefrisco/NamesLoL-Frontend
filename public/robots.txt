@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /lol-name-checker?*
-Disallow: /lol-name-list?*
+Disallow: /name-checker?*
+Disallow: /name-list?*
 Sitemap: https://www.nameslol.com/sitemap.xml
