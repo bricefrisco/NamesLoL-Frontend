@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-20 bg-gray-900 px-2.5 md:relative">
+    <header className="sticky top-0 z-20 bg-gray-900 px-3.5 md:relative">
       <nav className="container mx-auto flex max-w-screen-xl place-content-between items-center py-3">
         <Link href="/">
           <Image

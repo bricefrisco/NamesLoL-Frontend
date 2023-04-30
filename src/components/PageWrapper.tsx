@@ -17,7 +17,7 @@ const PageWrapper = ({ title, description, children }: Props) => {
       </Head>
       <div className="flex min-h-screen flex-col bg-gray-900 text-white">
         <Header />
-        <div className="container mx-auto max-w-screen-xl grow py-6 px-2.5 md:py-12">
+        <div className="container mx-auto max-w-screen-xl grow py-6 px-3.5 md:py-12">
           {children}
         </div>
         <Footer />

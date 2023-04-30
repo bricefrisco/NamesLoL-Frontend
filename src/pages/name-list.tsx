@@ -226,11 +226,26 @@ const NameList = ({
               <TableData className="hidden sm:table-cell">
                 {summoner.level}
               </TableData>
-              <TableData>
+              <TableData className="text-center sm:text-left">
                 <Moment fromNow>{summoner.availabilityDate}</Moment>
               </TableData>
               <TableData>
-                <Moment format="MM/DD/YYYY hh:mm:ss A">
+                <Moment
+                  format="MM/DD/YYYY hh:mm:ss A"
+                  className="hidden sm:block"
+                >
+                  {summoner.availabilityDate}
+                </Moment>
+                <Moment
+                  format="MM/DD/YYYY"
+                  className="block text-center sm:hidden"
+                >
+                  {summoner.availabilityDate}
+                </Moment>
+                <Moment
+                  format="hh:mm:ss A"
+                  className="block text-center sm:hidden"
+                >
                   {summoner.availabilityDate}
                 </Moment>
               </TableData>
