@@ -20,6 +20,7 @@ import HorizontalAdDesktop from "@/components/HorizontalAdDesktop";
 import HorizontalAdMobile from "@/components/HorizontalAdMobile";
 import SideRailAd from "@/components/SiderailAd";
 import PleaseDisableAdBlocker from "@/components/PleaseDisableAdBlocker";
+import { useEffect, useState } from "react";
 
 const floorDate = (date: Date) => {
   date.setHours(0);
@@ -69,6 +70,11 @@ const NameList = ({
   error,
 }: any) => {
   const router = useRouter();
+  const [initialRenderComplete, setInitialRenderComplete] = useState(false);
+
+  useEffect(() => {
+    setInitialRenderComplete(true);
+  }, []);
 
   const onRegionChange = (region: string) => {
     router.push({
@@ -227,27 +233,44 @@ const NameList = ({
                 {summoner.level}
               </TableData>
               <TableData className="text-center sm:text-left">
-                <Moment fromNow>{summoner.availabilityDate}</Moment>
+                {initialRenderComplete ? (
+                  <Moment fromNow>{summoner.availabilityDate}</Moment>
+                ) : (
+                  <span className="invisible">-- hours ago</span>
+                )}
               </TableData>
               <TableData>
-                <Moment
-                  format="MM/DD/YYYY hh:mm:ss A"
-                  className="hidden sm:block"
-                >
-                  {summoner.availabilityDate}
-                </Moment>
-                <Moment
-                  format="MM/DD/YYYY"
-                  className="block text-center sm:hidden"
-                >
-                  {summoner.availabilityDate}
-                </Moment>
-                <Moment
-                  format="hh:mm:ss A"
-                  className="block text-center sm:hidden"
-                >
-                  {summoner.availabilityDate}
-                </Moment>
+                {initialRenderComplete ? (
+                  <>
+                    <Moment
+                      format="MM/DD/YYYY hh:mm:ss A"
+                      className="hidden sm:block"
+                    >
+                      {summoner.availabilityDate}
+                    </Moment>
+                    <Moment
+                      format="MM/DD/YYYY"
+                      className="block text-center sm:hidden"
+                    >
+                      {summoner.availabilityDate}
+                    </Moment>
+                    <Moment
+                      format="hh:mm:ss A"
+                      className="block text-center sm:hidden"
+                    >
+                      {summoner.availabilityDate}
+                    </Moment>
+                  </>
+                ) : (
+                  <>
+                    <span className="invisible hidden sm:block">
+                      --/--/---- --:--:-- --
+                    </span>
+                    <span className="invisible block sm:hidden">
+                      --:--:-- --
+                    </span>
+                  </>
+                )}
               </TableData>
             </TableRow>
           ))}

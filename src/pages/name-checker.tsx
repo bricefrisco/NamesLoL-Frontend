@@ -11,7 +11,7 @@ import SideRailAd from "@/components/SiderailAd";
 import SummonerIcon from "@/components/SummonerIcon";
 import TimeDisclaimer from "@/components/TimeDisclaimer";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Moment from "react-moment";
 
 export const getServerSideProps = async (context: any) => {
@@ -68,11 +68,16 @@ const NameChecker = ({
   error,
 }: NameCheckerProps) => {
   const router = useRouter();
+  const [initialRenderComplete, setInitialRenderComplete] = useState(false);
   const [name, setName] = useState(initialName || "");
   const [region, setRegion] = useState(initialRegion || "na");
 
   const nameAvailable = summoner && summoner?.availabilityDate <= Date.now();
   const decay = Math.min(30, Math.max(6, summoner?.level));
+
+  useEffect(() => {
+    setInitialRenderComplete(true);
+  }, []);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -162,9 +167,11 @@ const NameChecker = ({
                 </div>
                 <div className="mt-1">
                   <span className="font-semibold">Last Activity:</span>{" "}
-                  <Moment format="MM/DD/YYYY hh:mm:ss A">
-                    {summoner.revisionDate}
-                  </Moment>
+                  {initialRenderComplete && (
+                    <Moment format="MM/DD/YYYY hh:mm:ss A">
+                      {summoner.revisionDate}
+                    </Moment>
+                  )}
                 </div>
               </div>
             </div>
@@ -178,9 +185,11 @@ const NameChecker = ({
                 <span className="font-semibold">
                   {nameAvailable ? "Expired:" : "Expires:"}
                 </span>{" "}
-                <Moment format="MM/DD/YYYY hh:mm:ss A">
-                  {summoner.availabilityDate}
-                </Moment>
+                {initialRenderComplete && (
+                  <Moment format="MM/DD/YYYY hh:mm:ss A">
+                    {summoner.availabilityDate}
+                  </Moment>
+                )}
               </div>
             </div>
           </>
