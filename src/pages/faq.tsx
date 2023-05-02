@@ -26,7 +26,7 @@ const Question = ({
         </svg>
         {question}
       </h3>
-      <p className="text-gray-500 text-gray-400">{answer}</p>
+      <p className="text-gray-400">{answer}</p>
     </div>
   );
 };
